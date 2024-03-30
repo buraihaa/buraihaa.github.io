@@ -22579,6 +22579,26 @@ has-background-danger.is-hoverable:active {
     z-index: 999;
     border-radius: 10px;
 }
+
+
+#goHomeButton {
+  font-weight: 500;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color, you can change this */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#goHomeButton:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
   
 
 
