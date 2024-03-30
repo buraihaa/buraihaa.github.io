@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to redirect to home page
     function goHome() {
-    window.location.href = "handler.html";
+    window.location.href = "index.html";
     }
 
     // Event Listeners
