@@ -49,18 +49,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const bobaCountButton = document.getElementById('bobaCountButton');
 
     bobaCountButton.addEventListener('click', () => {
-        // Create a new image element
-        const rainImage = document.createElement('img');
-        rainImage.src = '../anya.jpg'; // Replace with your rain image path
-        rainImage.classList.add('rain-image');
+        const numImages = 7; // Number of images to rain down
+        const imagePath = '../anya.jpg'; // Replace with your specific image path
 
-        // Append the image to the body
-        document.body.appendChild(rainImage);
+        const createRainImage = () => {
+            const rainImage = document.createElement('img');
+            rainImage.src = imagePath;
+            rainImage.classList.add('rain-image');
 
-        // Remove the image after the animation ends
-        setTimeout(() => {
-            rainImage.remove();
-        }, 5000); // Adjust timing to match your animation duration
+            rainImage.style.transform = `scale(${Math.random() * 0.5 + 0.1})`; // Random scale between 0.1 and 0.6
+            rainImage.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            rainImage.style.animationDuration = `${Math.random() * 2 + 3}s`; // Random animation duration (3-5 seconds)
+            rainImage.style.animationDelay = `${Math.random() * 3}s`; // Random animation delay (0-3 seconds)
+
+            document.body.appendChild(rainImage);
+
+            rainImage.addEventListener('animationend', () => {
+                rainImage.remove();
+            });
+        };
+
+        for (let i = 0; i < numImages; i++) {
+            createRainImage();
+        }
     });
 
 });
