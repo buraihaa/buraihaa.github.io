@@ -23,8 +23,8 @@ html, body {
 }
 
 #bobaCountButton {
-    position: absolute;
-    top: 25%; /* Adjust top position as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Move button back by half of its own width */
+    position: fixed;
+    top: 70px; /* Adjust top position as needed */
+    right: 20px; /* Center horizontally */
+    z-index: 1000;
 }
