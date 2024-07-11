@@ -47,7 +47,7 @@ html, body {
 .rain-image {
     position: fixed;
     top: -100px; /* Start above the viewport */
-    width: 30%; /* Adjust image scale */
+    width: 10%; /* Adjust image scale */
     animation: rainAnimation 3s linear; /* Adjust animation duration as needed */
     z-index: 1000;
     pointer-events: none; /* Prevent clicks on rain images */

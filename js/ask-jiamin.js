@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bobaCountButton = document.getElementById('bobaCountButton');
 
     bobaCountButton.addEventListener('click', () => {
-        const numImages = 7; // Number of images to rain down
+        const numImages = 10; // Number of images to rain down
         const imagePath = '../anya.jpg'; // Replace with your specific image path
 
         const createRainImage = () => {
