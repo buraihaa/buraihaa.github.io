@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Yes/No Buttons Functionality
+
+    // Initialize the boba count
+    let bobaCount = 0;
+
     const yesButton = document.getElementById('yesButton');
     const noButton = document.getElementById('noButton');
 
@@ -37,6 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     noButton.addEventListener('click', () => {
-        alert('You clicked No!');
+        // Increment the boba count
+        bobaCount++;
+        // Update the text of the Boba Count button
+        bobaCountButton.textContent = `Boba/Coffee Count ヾ( ･\`⌓´･)ﾉﾞ: ${bobaCount}`;
+
+
+        
+
     });
 });
