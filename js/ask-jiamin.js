@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set initial background
     document.body.style.backgroundImage = `url(${gifs[currentGifIndex]})`;
-    document.body.style.backgroundSize = 'contain'; // Ensure the background fits the screen
+    document.body.style.backgroundSize = 'cover'; // Ensure the background fits the screen
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundPosition = 'center center';
     document.body.style.backgroundAttachment = 'fixed';
