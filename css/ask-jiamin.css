@@ -10,7 +10,7 @@ html, body {
 }
 
 .card {
-    margin-top: -350px; /* Adjust this value as needed to raise the box vertically */
+    margin-top: -325px; /* Adjust this value as needed to raise the box vertically */
     border-radius: 15px; /* Adjust the value for more or less rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
 }
