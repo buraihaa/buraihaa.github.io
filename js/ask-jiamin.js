@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Yes/No Buttons Functionality
-
-    // Initialize the boba count
     let bobaCount = 0;
 
     const yesButton = document.getElementById('yesButton');
@@ -45,9 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
         bobaCount++;
         // Update the text of the Boba Count button
         bobaCountButton.textContent = `Boba/Coffee Count ヾ( ･\`⌓´･)ﾉﾞ: ${bobaCount}`;
-
-
-        
-
     });
+
+    // Boba Count Rain Animation
+    const bobaCountButton = document.getElementById('bobaCountButton');
+
+    bobaCountButton.addEventListener('click', () => {
+        // Create a new image element
+        const rainImage = document.createElement('img');
+        rainImage.src = '../anya.jpg'; // Replace with your rain image path
+        rainImage.classList.add('rain-image');
+
+        // Append the image to the body
+        document.body.appendChild(rainImage);
+
+        // Remove the image after the animation ends
+        setTimeout(() => {
+            rainImage.remove();
+        }, 5000); // Adjust timing to match your animation duration
+    });
+
 });

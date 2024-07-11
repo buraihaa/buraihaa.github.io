@@ -2,6 +2,10 @@ html, body {
     height: 100%;
 }
 
+.navbar {
+    z-index: 1001;
+}
+
 .container {
     height: 100%;
     display: flex;
@@ -26,5 +30,24 @@ html, body {
     position: fixed;
     top: 70px; /* Adjust top position as needed */
     right: 20px; /* Center horizontally */
+    z-index: 1000;
+}
+
+@keyframes rainAnimation {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+
+.rain-image {
+    position: fixed;
+    top: -100px; /* Start above the viewport */
+    left: calc(50% - 200px); /* Adjust left position as needed */
+    animation: rainAnimation 2s linear; /* Adjust animation duration as needed */
     z-index: 1000;
 }
