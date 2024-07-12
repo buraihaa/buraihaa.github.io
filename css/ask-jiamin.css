@@ -34,6 +34,7 @@ html, body {
 
 .exit-button {
     position: absolute;
+    padding: 0;
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
     width: 20px; /* Adjust size of the circle */
@@ -42,34 +43,13 @@ html, body {
     border: 2px solid;
     border-color:rgb(234, 69, 69);
     color: rgba(234, 69, 69);
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     border-radius: 50%; /* Makes the button circular */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.floating-exit-button {
-    display: inline-block;
-    padding: 0;
-    position: absolute;
-    top: 10px; /* Adjust as needed */
-    left: 10px; /* Adjust as needed */
-    width: 22px; /* Adjust size */
-    height: 22px; /* Adjust size */
-    background-color: rgb(247, 247, 247);
-    border: 2px solid rgb(69, 234, 105);
-    color: rgb(69, 234, 105);
-    font-size: 12px; /* Adjust font size */
-    cursor: pointer;
-    border-radius: 50%; /* Makes the button circular */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1001; /* Ensure it appears above the card */
-}
-
 
 .card-header {
     position: relative;
