@@ -50,6 +50,25 @@ html, body {
     align-items: center;
 }
 
+.floating-exit-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    width: 30px; /* Adjust size */
+    height: 30px; /* Adjust size */
+    background-color: rgb(247, 247, 247);
+    border: 2px solid rgb(234, 69, 69);
+    color: rgb(234, 69, 69);
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer;
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Ensure it appears above the card */
+}
+
+
 .card-header {
     position: relative;
     padding: 10px 20px; /* Adjust padding as needed to create space around the title and button */
