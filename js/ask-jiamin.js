@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const exitButton = document.getElementById('exitButton');
     const card = document.querySelector('.card');
 
+    // Exit Button
     exitButton.addEventListener('click', () => {
         card.style.display = 'none'; // Hide the card
+        refreshButton.style.display = 'block';
     });
-    
+
     // GIF Background Change Functionality
     const gifs = [
         '../gifs/0.webp',
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bobaCountButton = document.getElementById('bobaCountButton');
     const cardText = document.querySelector('.card-text');
     const nextButton = document.getElementById('nextButton');
+    const refreshButton = document.getElementById('refreshButton');
 
     // Statements array
     let statements = [
@@ -187,5 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < numImages; i++) {
             createRainImage();
         }
+    });
+
+    refreshButton.addEventListener('click', () => {
+        location.reload();
     });
 });

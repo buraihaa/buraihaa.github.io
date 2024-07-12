@@ -17,9 +17,6 @@ html, body {
     margin-top: -300px; /* Adjust this value as needed to raise the box vertically */
     border-radius: 15px; /* Adjust the value for more or less rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
-    width: 750px; /* Fixed width */
-    height: 280px; /* Fixed height */
-    overflow: auto; /* Adjust overflow behavior as needed */
 }
 
 .card-body {
@@ -30,21 +27,31 @@ html, body {
 
 .card-title {
     margin-bottom: 0px; /* Adjust the margin bottom as needed */
+    margin-left: 24px;
 }
 
 .exit-button {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: transparent;
-    border: none;
-    color: red;
-    font-size: 20px;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    width: 20px; /* Adjust size of the circle */
+    height: 20px; /* Adjust size of the circle */
+    background-color: rgb(247, 247, 247);
+    border: 2px solid;
+    border-color:rgb(234, 69, 69);
+    color: rgba(234, 69, 69);
+    font-size: 12px;
     cursor: pointer;
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .card-header {
-    position: relative; /* Ensure the header is positioned relative for absolute positioning */
+    position: relative;
+    padding: 10px 20px; /* Adjust padding as needed to create space around the title and button */
 }
 
 
@@ -77,6 +84,23 @@ html, body {
     top: 70px; /* Adjust top position as needed */
     right: 20px; /* Center horizontally */
     z-index: 1000;
+}
+
+#refreshButton {
+    display: none;
+    position: relative;
+    bottom: 12%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00ff04;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#refreshButton:hover {
+    background-color: #0056b3;
 }
 
 
