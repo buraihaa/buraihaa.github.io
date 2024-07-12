@@ -37,7 +37,7 @@ html, body {
     width: 20px; /* Adjust size of the circle */
     height: 20px; /* Adjust size of the circle */
     background-color: rgb(247, 247, 247);
-    border: 2px solid;
+    border: solid;
     border-color:rgb(234, 69, 69);
     color: rgba(234, 69, 69);
     font-size: 12px;
@@ -48,24 +48,10 @@ html, body {
     align-items: center;
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-    .exit-button {
-        width: 18px; /* Adjust size of the circle for mobile */
-        height: 18px; /* Adjust size of the circle for mobile */
-        font-size: 12px; /* Increase font size for better visibility */
-        top: 15px; /* Adjust positioning as needed */
-        left: 15px; /* Adjust positioning as needed */
-        color:#ee00ff
-    }
-}
-
-
 .card-header {
     position: relative;
     padding: 10px 20px; /* Adjust padding as needed to create space around the title and button */
 }
-
 
 .btn-container {
     display: flex;
