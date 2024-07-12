@@ -37,7 +37,7 @@ html, body {
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
     width: 20px; /* Adjust size of the circle */
-    height: 20px; /* Adjust size of the circle */
+    height: 30px; /* Adjust size of the circle */
     background-color: rgb(247, 247, 247);
     border: solid;
     border-color:rgb(234, 69, 69);
