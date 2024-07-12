@@ -17,15 +17,41 @@ html, body {
     margin-top: -300px; /* Adjust this value as needed to raise the box vertically */
     border-radius: 15px; /* Adjust the value for more or less rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+    width: 750px; /* Fixed width */
+    height: 280px; /* Fixed height */
+    overflow: auto; /* Adjust overflow behavior as needed */
+}
+
+.card-body {
+    height: calc(100% - 40px); /* Adjust height for inner content */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    margin-top: 10px;
 }
 
 .card-title {
-    margin-bottom: 20px; /* Adjust the margin bottom as needed */
+    margin-bottom: 0px; /* Adjust the margin bottom as needed */
 }
+
+.exit-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card-header {
+    position: relative; /* Ensure the header is positioned relative for absolute positioning */
+}
+
 
 .btn-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .btn-container button {

@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const exitButton = document.getElementById('exitButton');
+    const card = document.querySelector('.card');
 
+    exitButton.addEventListener('click', () => {
+        card.style.display = 'none'; // Hide the card
+    });
+    
     // GIF Background Change Functionality
     const gifs = [
         '../gifs/0.webp',
@@ -98,16 +104,38 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     nextButton.addEventListener('click', () => {
-        currentStatementIndex = (currentStatementIndex + 1) % statements.length;
-        cardText.textContent = statements[currentStatementIndex].statement;
-        hideNextButton();
+        currentStatementIndex++;
+        if (currentStatementIndex < statements.length) {
+            cardText.textContent = statements[currentStatementIndex].statement;
+            hideNextButton();
+        }
+        if (currentStatementIndex == statements.length - 1) {
+            // If last statement reached, hide card text box, and yes/no buttons
+            cardText.textContent = statements[currentStatementIndex].statement;
+            yesButton.style.display = 'none';
+            noButton.style.display = 'none';          
+        }
     });
+
+    function incramentBobaCount() {
+        // Increment the boba count
+        bobaCount++;
+        // Update the text of the Boba Count button
+        bobaCountButton.textContent = `Boba/Coffee Count ヾ( ･\`⌓´･)ﾉﾞ: ${bobaCount}`;
+
+        // Add vibrating class
+        bobaCountButton.classList.add('vibrate');
+        setTimeout(() => {
+            bobaCountButton.classList.remove('vibrate');
+        }, 500); // Adjust duration as needed
+    }
 
     yesButton.addEventListener('click', () => {
         cardText.textContent = statements[currentStatementIndex].yes;
         if (statements[currentStatementIndex].requiredAnswer === 'yes') {
             showNextButton();
         } else {
+            incramentBobaCount();
             yesButton.style.display = 'none';
             noButton.style.display = 'none';
             setTimeout(() => {
@@ -123,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (statements[currentStatementIndex].requiredAnswer === 'no') {
             showNextButton();
         } else {
+            incramentBobaCount();
             yesButton.style.display = 'none';
             noButton.style.display = 'none';
             setTimeout(() => {
@@ -131,17 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 noButton.style.display = 'inline-block';
             }, 3000); // Revert back after 3 seconds
         }
-
-        // Increment the boba count
-        bobaCount++;
-        // Update the text of the Boba Count button
-        bobaCountButton.textContent = `Boba/Coffee Count ヾ( ･\`⌓´･)ﾉﾞ: ${bobaCount}`;
-
-        // Add vibrating class
-        bobaCountButton.classList.add('vibrate');
-        setTimeout(() => {
-            bobaCountButton.classList.remove('vibrate');
-        }, 500); // Adjust duration as needed
     });
 
     // Boba Count Button Click Event
