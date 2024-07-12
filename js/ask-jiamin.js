@@ -1,4 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let statements = [
+        {
+            statement: "Hi Jiamin, did you have a good day?",
+            yes: "I'm glad to hear that!",
+            no: "I'm sorry to hear that :( Have some boba...but not too much!",
+            requiredAnswer: "yes"
+        },
+        {
+            statement: "Do you want to play a game with me?",
+            yes: "よかったね!",
+            no: "私は今悲しいです。 (ノ_<。) 君はにもっとコーヒーが必要だ。",
+            requiredAnswer: "yes"
+        },
+        {
+            statement: "Do you know that you're a pretty unique and cool person?",
+            yes: "是的! You know a lot of languages, have a sense of humor, and good music taste!",
+            no: "错误的选择",
+            requiredAnswer: "yes"
+        },
+        {
+            statement: "オーケー。僕は迷惑ですか?",
+            yes: "そうか...",
+            no: "うそ (｡･･｡)",
+            requiredAnswer: "no"
+        },
+        {
+            statement: "You are my NPC so you have to answer my next question, ok?",
+            yes: "хорошо",
+            no: "What do you mean no? You are NPC...stop self developing! You need more coffee.",
+            requiredAnswer: "yes"
+        },
+        {
+            statement: "I think you're really cute and have a very intersting personality and mind! I can tell you're not like many other girls, and I really like that. I want us to get to know each other more! Do you want to go on a date with me? (We can grab some coffee/tea and go somewhere nice and talk!)",
+            yes: "Yay! I'm really glad! Talk to your programmer so we can schedule a good day / time!",
+            no: "Sorry, You're my NPC. You're not thinking straight. More boba & coffee for you.",
+            requiredAnswer: "yes"
+        },
+        {
+            statement: "おめでとう合格! I'm sorry this was the hardest test ever. You can 'X' out to retake if you want!"
+        }
+    ]
+
     // GIF Background Change Functionality
     const gifs = [
         '../gifs/0.webp',
@@ -49,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bobaCountButton = document.getElementById('bobaCountButton');
 
     bobaCountButton.addEventListener('click', () => {
-        const numImages = 10; // Number of images to rain down
+        const numImages = 16; // Number of images to rain down
         const imagePath = '../anya.jpg'; // Replace with your specific image path
 
         const createRainImage = () => {

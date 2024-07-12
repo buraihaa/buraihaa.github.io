@@ -36,7 +36,7 @@ html, body {
 @keyframes rainAnimation {
     0% {
         transform: translateY(-100%);
-        opacity: 0;
+        opacity: 1;
     }
     100% {
         transform: translateY(100vh);
@@ -47,7 +47,7 @@ html, body {
 .rain-image {
     position: fixed;
     top: -100px; /* Start above the viewport */
-    width: 10%; /* Adjust image scale */
+    width: 20%; /* Adjust image scale */
     animation: rainAnimation 3s linear; /* Adjust animation duration as needed */
     z-index: 1000;
     pointer-events: none; /* Prevent clicks on rain images */
