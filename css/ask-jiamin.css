@@ -51,12 +51,12 @@ html, body {
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .exit-button {
-        width: 30px; /* Adjust size of the circle for mobile */
-        height: 30px; /* Adjust size of the circle for mobile */
-        font-size: 16px; /* Increase font size for better visibility */
+        width: 18px; /* Adjust size of the circle for mobile */
+        height: 18px; /* Adjust size of the circle for mobile */
+        font-size: 12px; /* Increase font size for better visibility */
         top: 15px; /* Adjust positioning as needed */
         left: 15px; /* Adjust positioning as needed */
-        color:#00ff04
+        color:#ee00ff
     }
 }
 
