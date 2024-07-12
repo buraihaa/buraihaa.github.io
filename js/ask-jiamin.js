@@ -1,4 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // GIF Background Change Functionality
+    const gifs = [
+        '../gifs/0.webp',
+        '../gifs/1.webp',
+        '../gifs/2.webp', // Add more paths as needed
+        '../gifs/3.webp',
+        '../gifs/4.gif',
+        '../gifs/5.gif',
+        '../gifs/6.webp',
+        '../gifs/7.gif',
+        '../gifs/8.gif',
+        '../gifs/9.gif',
+        '../gifs/10.jpg'
+    ];
+    let currentGifIndex = 0;
+
+    // Set initial background
+    document.body.style.backgroundImage = `url(${gifs[currentGifIndex]})`;
+    document.body.style.backgroundSize = 'cover'; // Ensure the background fits the screen; use 'contain' to fit
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundPosition = 'center center';
+    document.body.style.backgroundAttachment = 'fixed';
+
+    const clickMeButton = document.getElementById('clickMeButton');
+    clickMeButton.addEventListener('click', () => {
+        currentGifIndex = (currentGifIndex + 1) % gifs.length;
+        document.body.style.backgroundImage = `url(${gifs[currentGifIndex]})`;
+    });
+
+    // Initialize the boba count
+    let bobaCount = 0;
+
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+    const bobaCountButton = document.getElementById('bobaCountButton');
+    const cardText = document.querySelector('.card-text');
+    const nextButton = document.getElementById('nextButton');
+
+    // Statements array
     let statements = [
         {
             statement: "Hi Jiamin, did you have a good day?",
@@ -31,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             requiredAnswer: "yes"
         },
         {
-            statement: "I think you're really cute and have a very intersting personality and mind! I can tell you're not like many other girls, and I really like that. I want us to get to know each other more! Do you want to go on a date with me? (We can grab some coffee/tea and go somewhere nice and talk!)",
+            statement: "I think you're really cute and have a very interesting personality and mind! I can tell you're not like many other girls, and I really like that. I want us to get to know each other more! Do you want to go on a date with me? (We can grab some coffee/tea and go somewhere nice and talk!)",
             yes: "Yay! I'm really glad! Talk to your programmer so we can schedule a good day / time!",
             no: "Sorry, You're my NPC. You're not thinking straight. More boba & coffee for you.",
             requiredAnswer: "yes"
@@ -39,57 +79,72 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             statement: "おめでとう合格! I'm sorry this was the hardest test ever. You can 'X' out to retake if you want!"
         }
-    ]
-
-    // GIF Background Change Functionality
-    const gifs = [
-        '../gifs/0.webp',
-        '../gifs/1.webp',
-        '../gifs/2.webp', // Add more paths as needed
-        '../gifs/3.webp',
-        '../gifs/4.gif',
-        '../gifs/5.gif',
-        '../gifs/6.webp',
-        '../gifs/7.gif',
-        '../gifs/8.gif',
-        '../gifs/9.gif',
-        '../gifs/10.jpg'
     ];
-    let currentGifIndex = 0;
 
-    // Set initial background
-    document.body.style.backgroundImage = `url(${gifs[currentGifIndex]})`;
-    document.body.style.backgroundSize = 'cover'; // Ensure the background fits the screen; use 'contain' to fit
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundPosition = 'center center';
-    document.body.style.backgroundAttachment = 'fixed';
+    // Set initial statement
+    let currentStatementIndex = 0;
+    cardText.textContent = statements[currentStatementIndex].statement;
 
-    const clickMeButton = document.getElementById('clickMeButton');
-    clickMeButton.addEventListener('click', () => {
-        currentGifIndex = (currentGifIndex + 1) % gifs.length;
-        document.body.style.backgroundImage = `url(${gifs[currentGifIndex]})`;
+    const showNextButton = () => {
+        yesButton.style.display = 'none';
+        noButton.style.display = 'none';
+        nextButton.style.display = 'block';
+    };
+
+    const hideNextButton = () => {
+        yesButton.style.display = 'block';
+        noButton.style.display = 'block';
+        nextButton.style.display = 'none';
+    };
+
+    nextButton.addEventListener('click', () => {
+        currentStatementIndex = (currentStatementIndex + 1) % statements.length;
+        cardText.textContent = statements[currentStatementIndex].statement;
+        hideNextButton();
     });
 
-    // Yes/No Buttons Functionality
-    let bobaCount = 0;
-
-    const yesButton = document.getElementById('yesButton');
-    const noButton = document.getElementById('noButton');
-
     yesButton.addEventListener('click', () => {
-        alert('You clicked Yes!');
+        cardText.textContent = statements[currentStatementIndex].yes;
+        if (statements[currentStatementIndex].requiredAnswer === 'yes') {
+            showNextButton();
+        } else {
+            yesButton.style.display = 'none';
+            noButton.style.display = 'none';
+            setTimeout(() => {
+                cardText.textContent = statements[currentStatementIndex].statement;
+                yesButton.style.display = 'inline-block';
+                noButton.style.display = 'inline-block';
+            }, 3000); // Revert back after 3 seconds
+        }
     });
 
     noButton.addEventListener('click', () => {
+        cardText.textContent = statements[currentStatementIndex].no;
+        if (statements[currentStatementIndex].requiredAnswer === 'no') {
+            showNextButton();
+        } else {
+            yesButton.style.display = 'none';
+            noButton.style.display = 'none';
+            setTimeout(() => {
+                cardText.textContent = statements[currentStatementIndex].statement;
+                yesButton.style.display = 'inline-block';
+                noButton.style.display = 'inline-block';
+            }, 3000); // Revert back after 3 seconds
+        }
+
         // Increment the boba count
         bobaCount++;
         // Update the text of the Boba Count button
         bobaCountButton.textContent = `Boba/Coffee Count ヾ( ･\`⌓´･)ﾉﾞ: ${bobaCount}`;
+
+        // Add vibrating class
+        bobaCountButton.classList.add('vibrate');
+        setTimeout(() => {
+            bobaCountButton.classList.remove('vibrate');
+        }, 500); // Adjust duration as needed
     });
 
-    // Boba Count Rain Animation
-    const bobaCountButton = document.getElementById('bobaCountButton');
-
+    // Boba Count Button Click Event
     bobaCountButton.addEventListener('click', () => {
         const numImages = 16; // Number of images to rain down
         const imagePath = '../anya.jpg'; // Replace with your specific image path
@@ -115,5 +170,4 @@ document.addEventListener('DOMContentLoaded', () => {
             createRainImage();
         }
     });
-
 });

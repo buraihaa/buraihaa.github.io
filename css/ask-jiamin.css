@@ -19,6 +19,26 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
 }
 
+.card-title {
+    margin-bottom: 20px; /* Adjust the margin bottom as needed */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container button {
+    flex: 1;
+    margin: 1rem; /* Adjust margin between buttons as needed */
+}
+
+.btn-next {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #clickMeButton {
     position: fixed;
     bottom: 20px;
@@ -33,6 +53,24 @@ html, body {
     z-index: 1000;
 }
 
+
+/* Vibrate Animation For "No Button"*/
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-20px); }
+
+    50% { transform: translateX(20px); }
+
+    75% { transform: translateX(-20px); }
+
+    100% { transform: translateX(0); }
+}
+
+.vibrate {
+    animation: vibrate 0.5s linear;
+}
+
+/* Boba Count Button Image Rain Animation */
 @keyframes rainAnimation {
     0% {
         transform: translateY(-100%);
