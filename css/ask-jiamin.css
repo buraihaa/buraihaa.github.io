@@ -37,12 +37,12 @@ html, body {
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
     width: 20px; /* Adjust size of the circle */
-    height: 30px; /* Adjust size of the circle */
+    height: 20px; /* Adjust size of the circle */
     background-color: rgb(247, 247, 247);
-    border: solid;
+    border: 2px solid;
     border-color:rgb(234, 69, 69);
     color: rgba(234, 69, 69);
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 50%; /* Makes the button circular */
     display: flex;
