@@ -51,14 +51,16 @@ html, body {
 }
 
 .floating-exit-button {
+    display: inline-block;
+    padding: 0;
     position: absolute;
     top: 10px; /* Adjust as needed */
     left: 10px; /* Adjust as needed */
     width: 22px; /* Adjust size */
     height: 22px; /* Adjust size */
     background-color: rgb(247, 247, 247);
-    border: 2px solid rgb(234, 69, 69);
-    color: rgb(234, 69, 69);
+    border: 2px solid rgb(69, 234, 105);
+    color: rgb(69, 234, 105);
     font-size: 12px; /* Adjust font size */
     cursor: pointer;
     border-radius: 50%; /* Makes the button circular */
