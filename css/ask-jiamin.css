@@ -48,6 +48,17 @@ html, body {
     align-items: center;
 }
 
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .exit-button {
+        width: 20px; /* Adjust size of the circle for mobile */
+        height: 20px; /* Adjust size of the circle for mobile */
+        font-size: 12px; /* Increase font size for better visibility */
+        top: 10px; /* Adjust positioning as needed */
+        left: 10px; /* Adjust positioning as needed */
+    }
+}
+
 
 .card-header {
     position: relative;
