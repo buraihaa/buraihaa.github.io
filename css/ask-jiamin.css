@@ -33,6 +33,7 @@ html, body {
 }
 
 .exit-button {
+    display: inline-block;
     position: absolute;
     padding: 0;
     top: 10px; /* Adjust as needed */
