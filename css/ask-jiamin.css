@@ -20,13 +20,13 @@ html, body {
     border-color: black;
     border-width: 3px;
     width: 100%;
-    max-width: 80%;
+    max-width: 100%;
 }
 
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .card {
-        max-width: 600px; /* Adjust the max-width as needed */
+        max-width: 660px; /* Adjust the max-width as needed */
     }
 }
 
