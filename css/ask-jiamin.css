@@ -17,6 +17,17 @@ html, body {
     margin-top: -300px; /* Adjust this value as needed to raise the box vertically */
     border-radius: 15px; /* Adjust the value for more or less rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+    border-color: black;
+    border-width: 3px;
+    width: 100%;
+    max-width: 80%;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .card {
+        max-width: 600px; /* Adjust the max-width as needed */
+    }
 }
 
 .card-body {
@@ -27,7 +38,7 @@ html, body {
 
 .card-title {
     margin-bottom: 0px; /* Adjust the margin bottom as needed */
-    /*margin-left: 24px;*/
+    margin-left: 24px;
     margin-top: 6px;
     margin-bottom: 6px;
 }
@@ -55,6 +66,7 @@ html, body {
 .card-header {
     position: relative;
     padding: 6px 20px; /* Adjust padding as needed to create space around the title and button */
+    border-bottom: 2px solid black;
 }
 
 .btn-container {
