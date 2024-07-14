@@ -138,6 +138,7 @@ html, body {
 }
 
 #bobaCountButton {
+    display: inline-block;
     position: fixed;
     /*top: 70px; /* Adjust top position as needed */
     top: 10%;
