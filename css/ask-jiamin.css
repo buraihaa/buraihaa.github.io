@@ -81,7 +81,7 @@ html, body {
 
 .btn-container button {
     /*flex: 1;*/
-    margin: 0 -64px; /* Adjust margin between buttons as needed */
+    margin: 0 -30px; /* Adjust margin between buttons as needed */
     width: 80px;
     height: 44px;
     border-radius: 10px;
@@ -200,12 +200,12 @@ html, body {
 @media (max-width: 576px) {
     #creditsButton {
         bottom: 20px; /* Move up to avoid overlap */
-        left: 10px;
+        left: 2px;
     }
 
     #clickMeButton {
         bottom: 20px;
-        right: 10px;
+        right: 2px;
     }
 }
 
