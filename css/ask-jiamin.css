@@ -172,7 +172,7 @@ html, body {
     bottom: 12%;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #00ff04;
+    background-color: #7ee90b;
     color: black;
     border-radius: 12px;
     border-width: 3px;
@@ -181,7 +181,7 @@ html, body {
 }
 
 #refreshButton:hover {
-    background-color: #00e304;
+    background-color: #93fa25;
 }
 
 #creditsButton {
