@@ -150,7 +150,7 @@ html, body {
     position: fixed;
     white-space: nowrap;
     /*top: 70px; /* Adjust top position as needed */
-    top: 12%;
+    top: 8%;
     /*right: 20px; /* Center horizontally */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to be precisely centered */
@@ -194,6 +194,19 @@ html, body {
     border-width: 3px;
     background-color: rgba(255, 255, 255, 0.565);
     color: rgba(0, 0, 0, 0.565);
+}
+
+/* Adjust positions on smaller screens */
+@media (max-width: 576px) {
+    #creditsButton {
+        bottom: 20px; /* Move up to avoid overlap */
+        left: 10px;
+    }
+
+    #clickMeButton {
+        bottom: 20px;
+        right: 10px;
+    }
 }
 
 
