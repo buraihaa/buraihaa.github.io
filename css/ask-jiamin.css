@@ -80,12 +80,19 @@ html, body {
 
 .btn-container button {
     /*flex: 1;*/
-    margin: 0 -120px; /* Adjust margin between buttons as needed */
+    margin: 0 -80px; /* Adjust margin between buttons as needed */
     width: 80px;
     height: 44px;
     border-radius: 10px;
     border-width: 2px;
     border-color: black;
+}
+
+/* Adjust styles for larger screens */
+@media (min-width: 768px) {
+    .btn-container button {
+        margin: 0 -140px; /* Adjust margin between buttons for larger screens */
+    }
 }
 
 #yesButton {
