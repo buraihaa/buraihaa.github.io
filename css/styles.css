@@ -5,7 +5,7 @@ body {
 
 /* Navbar */
 .navbar .navbar-nav .nav-link {
-    z-index: 1001 !important;
+    z-index: 2000 !important;
     color: black !important; /* Ensure navbar text color is black */
 }
 

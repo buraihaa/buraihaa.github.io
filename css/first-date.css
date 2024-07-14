@@ -11,9 +11,8 @@ body, html {
 }
 
 
-.navbar .navbar-nav .nav-link {
+.navbar {
     z-index: 1001;
-    color: black;
 }
 
 .container {

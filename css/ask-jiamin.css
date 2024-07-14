@@ -2,9 +2,8 @@ html, body {
     height: 100%;
 }
 
-.navbar .navbar-nav .nav-link {
+.navbar {
     z-index: 1001;
-    color: black;
 }
 
 .container {
@@ -155,7 +154,7 @@ html, body {
     /*right: 20px; /* Center horizontally */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to be precisely centered */
-    z-index: 1000;
+    z-index: 900;
     border-radius: 12px;
     border-color: black;
     border-width: 3px;
