@@ -119,6 +119,13 @@ html, body {
     border-width: 2px;
     border-color: black;
     background-color: rgb(184, 53, 216);
+    color: black;
+}
+
+.btn-next:hover {
+    background-color: rgb(210, 86, 241);
+    border-color: black;
+    color: black;
 }
 
 #clickMeButton {
