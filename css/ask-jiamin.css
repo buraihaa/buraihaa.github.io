@@ -99,8 +99,16 @@ html, body {
     background-color: rgb(85, 223, 67);
 }
 
+#yesButton:hover {
+    background-color: rgb(108, 240, 90);
+}
+
 #noButton {
     background-color: rgb(242, 86, 86)
+}
+
+#noButton:hover {
+    background-color: rgb(255, 114, 114)
 }
 
 .btn-next {
@@ -125,16 +133,27 @@ html, body {
     color: black;
 }
 
+#clickMeButton:hover {
+    background-color: rgb(90, 215, 240);
+}
+
 #bobaCountButton {
     position: fixed;
-    top: 70px; /* Adjust top position as needed */
-    right: 20px; /* Center horizontally */
+    /*top: 70px; /* Adjust top position as needed */
+    top: 10%;
+    /*right: 20px; /* Center horizontally */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to be precisely centered */
     z-index: 1000;
     border-radius: 12px;
     border-color: black;
     border-width: 3px;
-    background-color: rgb(246, 186, 46);
+    background-color: rgb(255, 179, 0);
     color: black;
+}
+
+#bobaCountButton:hover {
+    background-color: rgb(255, 200, 0)
 }
 
 #refreshButton {
@@ -144,14 +163,15 @@ html, body {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #00ff04;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    color: black;
+    border-radius: 12px;
+    border-width: 3px;
+    border-color: black;
     cursor: pointer;
 }
 
 #refreshButton:hover {
-    background-color: #0056b3;
+    background-color: #00e304;
 }
 
 #creditsButton {
@@ -169,18 +189,18 @@ html, body {
 
 /* Vibrate Animation For "No Button"*/
 @keyframes vibrate {
-    0% { transform: translateX(0); }
+    0% { transform: translateX(0px); }
     25% { transform: translateX(-20px); }
 
-    50% { transform: translateX(20px); }
+    50% { transform: translateX(0px); }
 
-    75% { transform: translateX(-20px); }
+    75% { transform: translateX(20px); }
 
-    100% { transform: translateX(0); }
+    100% { transform: translateX(0px); }
 }
 
 .vibrate {
-    animation: vibrate 0.5s linear;
+    animation: vibrate 0.4s linear;
 }
 
 /* Boba Count Button Image Rain Animation */

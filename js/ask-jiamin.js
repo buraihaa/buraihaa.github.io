@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cardText.textContent = statements[currentStatementIndex].statement;
                 yesButton.style.display = 'inline-block';
                 noButton.style.display = 'inline-block';
-            }, 3000); // Revert back after 3 seconds
+            }, 3800); // Revert back after 3 seconds
         }
     });
 
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cardText.textContent = statements[currentStatementIndex].statement;
                 yesButton.style.display = 'inline-block';
                 noButton.style.display = 'inline-block';
-            }, 3000); // Revert back after 3 seconds
+            }, 3800); // Revert back after 3 seconds
         }
     });
 
