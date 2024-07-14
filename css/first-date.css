@@ -4,15 +4,15 @@ body, html {
     font-family: Arial, sans-serif;
     overflow-y: auto;
     scroll-behavior: smooth;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../windows-xp.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('../los_angeles.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
 
-.navbar {
-    z-index: 1001;
+.navbar .navbar-nav .nav-link {
+    color: rgb(44, 44, 44) !important;
 }
 
 .container {
@@ -28,6 +28,14 @@ body, html {
     margin-bottom: 20px;
 }
 
+.intro-text h2 {
+    font-size: 22px; /* Adjust the font size as needed */
+}
+
+.intro-text p {
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
 .card {
     position: relative;
     width: 90%; /* Adjust the width of the card */
@@ -36,19 +44,19 @@ body, html {
     background-size: contain; /* Ensure the image scales to fit */
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background 0.5s ease-in-out; /* Gradient transition effect */
     border-radius: 10px; /* Optional: round the corners of the cards */
-    border-width: 6px;
+    border-width: 4px;
     border-color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow effect */
 }
 
 .caption-box {
-    background: rgba(0, 0, 0, 0.258); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
     padding: 20px;
     width: 80%;
     margin: 10px;
