@@ -4,7 +4,7 @@ body, html {
     font-family: Arial, sans-serif;
     overflow-y: auto;
     scroll-behavior: smooth;
-    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../windows-xp.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../windows-xp.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -24,12 +24,13 @@ body, html {
 
 .card {
     position: relative;
-    width: 80%; /* Adjust the width of the card */
-    height: 70vh; /* Adjust the height of the card */
+    width: 90%; /* Adjust the width of the card */
+    height: 60vh; /* Adjust the height of the card */
     margin: 20px 0; /* Space between cards */
-    background-size: cover; /* Ensure the image scales to fit */
+    background-size: contain; /* Ensure the image scales to fit */
     background-repeat: no-repeat;
     background-position: center;
+    background-color: rgba(0, 0, 0, 0.84);
     display: flex;
     justify-content: center;
     align-items: center;
