@@ -80,7 +80,7 @@ html, body {
 
 .btn-container button {
     /*flex: 1;*/
-    margin: 0 -80px; /* Adjust margin between buttons as needed */
+    margin: 0 -64px; /* Adjust margin between buttons as needed */
     width: 80px;
     height: 44px;
     border-radius: 10px;
