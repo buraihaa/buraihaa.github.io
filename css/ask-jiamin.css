@@ -230,7 +230,7 @@ html, body {
     top: -100px; /* Start above the viewport */
     width: 20%; /* Adjust image scale */
     animation: rainAnimation 3s linear; /* Adjust animation duration as needed */
-    z-index: 1000;
+    z-index: 1001;
     pointer-events: none; /* Prevent clicks on rain images */
     opacity: 0; /* Start with 0 opacity */
 }
