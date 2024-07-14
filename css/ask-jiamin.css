@@ -150,7 +150,7 @@ html, body {
     position: fixed;
     white-space: nowrap;
     /*top: 70px; /* Adjust top position as needed */
-    top: 8%;
+    top: 140px; /* adjust the top position relative to the text card */
     /*right: 20px; /* Center horizontally */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to be precisely centered */

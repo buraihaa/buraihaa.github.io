@@ -121,6 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Dynamically position boba count button above text card
+    function positionBobaCountButton() {
+        const cardRect = textCard.getBoundingClientRect();
+        bobaCountButton.style.top = `${cardRect.top - bobaCountButton.offsetHeight - 10}px`;
+    }
+
+    positionBobaCountButton();
+    window.addEventListener('resize', positionBobaCountButton);
+
     function incramentBobaCount() {
         // Increment the boba count
         bobaCount++;
