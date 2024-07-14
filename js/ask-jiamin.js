@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // GIF Background Change Functionality
     const gifs = [
-        '../gifs/0.webp',
+        '../gifs/0.gif',
+        '../gifs/00.webp',
         '../gifs/1.webp',
         '../gifs/2.webp', // Add more paths as needed
         '../gifs/3.webp',
