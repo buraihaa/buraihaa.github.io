@@ -149,7 +149,7 @@ html, body {
     position: fixed;
     white-space: nowrap;
     /*top: 70px; /* Adjust top position as needed */
-    top: 10%;
+    top: 12%;
     /*right: 20px; /* Center horizontally */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to be precisely centered */
