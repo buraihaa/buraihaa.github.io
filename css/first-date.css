@@ -13,7 +13,7 @@ body, html {
 
 .navbar .navbar-nav .nav-link {
     z-index: 1001;
-    color: rgb(44, 44, 44) !important;
+    color: black;
 }
 
 .container {

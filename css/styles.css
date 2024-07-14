@@ -5,5 +5,11 @@ body {
 
 /* Navbar */
 .navbar .navbar-nav .nav-link {
+    z-index: 1001 !important;
     color: black !important; /* Ensure navbar text color is black */
+}
+
+/* Adjust z-index when the navbar is collapsed */
+.navbar.collapsing {
+    z-index: 1002 !important; /* Same higher value */
 }
