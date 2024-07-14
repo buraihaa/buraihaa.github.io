@@ -4,7 +4,7 @@ body, html {
     font-family: Arial, sans-serif;
     overflow-y: auto;
     scroll-behavior: smooth;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('../los_angeles.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.387), rgba(0, 0, 0, 0.387)), url('../los_angeles.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
