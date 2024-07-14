@@ -42,6 +42,8 @@ html, body {
     margin-right: 24px;
     margin-top: 6px;
     margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: normal;
 }
 
 .exit-button {
@@ -78,19 +80,20 @@ html, body {
 
 .btn-container button {
     /*flex: 1;*/
-    margin: 0 -140px; /* Adjust margin between buttons as needed */
-    width: 70px;
+    margin: 0 -160px; /* Adjust margin between buttons as needed */
+    width: 80px;
+    height: 44px;
     border-radius: 10px;
     border-width: 2px;
     border-color: black;
 }
 
 #yesButton {
-    background-color: rgb(69, 237, 46);
+    background-color: rgb(85, 223, 67);
 }
 
 #noButton {
-    background-color: rgb(250, 59, 59)
+    background-color: rgb(242, 86, 86)
 }
 
 .btn-next {
@@ -111,6 +114,8 @@ html, body {
     border-radius: 12px;
     border-color: black;
     border-width: 3px;
+    background-color: rgb(98, 192, 242);
+    color: black;
 }
 
 #bobaCountButton {
@@ -121,6 +126,8 @@ html, body {
     border-radius: 12px;
     border-color: black;
     border-width: 3px;
+    background-color: rgb(246, 186, 46);
+    color: black;
 }
 
 #refreshButton {
@@ -138,6 +145,18 @@ html, body {
 
 #refreshButton:hover {
     background-color: #0056b3;
+}
+
+#creditsButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    border-radius: 12px;
+    border-color: rgba(0, 0, 0, 0.565);
+    border-width: 3px;
+    background-color: rgba(255, 255, 255, 0.565);
+    color: rgba(0, 0, 0, 0.565);
 }
 
 
