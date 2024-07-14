@@ -1,0 +1,9 @@
+/* Global styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar .navbar-nav .nav-link {
+    color: black !important; /* Ensure navbar text color is black */
+}

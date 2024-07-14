@@ -2,8 +2,9 @@ html, body {
     height: 100%;
 }
 
-.navbar {
+.navbar .navbar-nav .nav-link {
     z-index: 1001;
+    color: rgb(44, 44, 44) !important;
 }
 
 .container {
