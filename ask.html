@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardest Test Ever</title>
+  <link rel="stylesheet" href="ask.css">
+  
+</head>
+<body>
+
+  <!-- Modal Template -->
+  <div class="modal" id="questionModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">The Hardest Test Ever</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p id="questionText">Placeholder text</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button id="yesButton" class="button is-success">はい</button>
+        <button id="noButton" class="button is-danger">いいえ</button>
+        <button id="nextButton" class="button is-primary">Next</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Go Home Button -->
+  <button id="goHomeButton">Go Home</button>
+
+  <!-- Refresh Button-->
+  <div id="refreshContainer" class="refresh-container is-hidden">
+    <button id="refreshButton" class="button is-primary is-large">いってらっしゃい</button>
+  </div>
+
+
+  <!-- Button that tracks boba count -->
+  <div>
+    <button id="bobaCounterButton" class="button is-primary is-rounded is-static">Boba/Coffee Count  ヾ( ･`⌓´･)ﾉﾞ:<span id="bobaCountDisplay">0</span></button>
+  </div>
+  
+  <!-- Button to change background -->
+  <div id="changeBackgroundButton" class="change-background-button">
+    <button id="changeBackground" class="button is-info">Click Me ヾ(＾-＾)ノ</button>
+  </div>
+
+  <!-- Author Info -->
+  <div id="authorName" class="author-name">
+    <button id="authorName" class="button is-info is-rounded is-static">To: Jiamin Cheng<br>From: Christopher Bui</br></button>
+  </div>
+  
+  <script src="ask.js"></script>
+
+</body>
+</html>
