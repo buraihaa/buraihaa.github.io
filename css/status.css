@@ -1,0 +1,83 @@
+/* Status Box Styling */
+.status-box {
+    background-color: #f0f0f0;
+    border-radius: 13px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow boxes to grow and fill the container */
+    max-width: 48%; /* Ensure the boxes are side by side */
+    border: 2px solid black; /* Black border with a thickness of 2px */
+}
+
+.status-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.status-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.update-container {
+    display: flex;
+    align-items: center;
+}
+
+.update-container input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.update-btn {
+    background-color: #007bff; /* Blue background */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: white; /* White arrow */
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.update-btn i {
+    margin: 0;
+}
+
+/* Flexbox container to align boxes side by side */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Space boxes evenly */
+    margin-top: 110px; /* Adjust this to control how much space is above the boxes */
+    /* padding: 20px; */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .status-box {
+        max-width: 100%; /* Stack boxes vertically on smaller screens */
+        margin-bottom: 20px; /* Ensure spacing between stacked boxes */
+    }
+
+    .container {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center align boxes */
+    }
+}

@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask Jiamin</title>
+    <title>Status</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/svg" href="../orange.svg">
-    <!-- <link rel="stylesheet" href="../css/styles.css"> -->
-    <link href="../css/ask-jiamin.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/status.css"> <!-- Link to the new stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- For the up arrow icon -->
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- <a class="navbar-brand" href="../index.html">Navbar</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,10 +18,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
-                <li>
+                <li class="nav-item active">
                     <a class="nav-link" href="status.html">Status</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="ask-jiamin.html">Ask Jiamin</a>
                 </li>
                 <li class="nav-item">
@@ -40,37 +37,28 @@
         </div>
     </nav>
 
-    <!-- Boba Count Button -->
-    <button id="bobaCountButton" class="btn btn-primary">Boba/Coffee Count ヾ( ･`⌓´･)ﾉﾞ: 0</button>
-    
-    <!-- Question Text Box-->
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-        <div class="card text-center">
-            <div class="card-header">
-                <button id="exitButton" class="exit-button">✕</button>
-                <h5 class="card-title">Hardest Test Ever</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Welcome! Would you like to ask a question?</p>
-                <div class="btn-container">
-                    <button id="yesButton" class="btn">はい</button>
-                    <button id="noButton" class="btn">いいえ</button>
-                </div>
-                <button id="nextButton" class="btn btn-success btn-next" style="display: none; margin-top: 20px;">Next</button>
+    <div class="container">
+        <div class="status-box">
+            <div class="status-text" id="status-chris">Chris's Status: <span class="status-content">No status yet.</span></div>
+            <div class="status-meta" id="status-meta-chris">Last updated: <span class="status-time">--</span></div>
+            <div class="update-container">
+                <input type="text" id="new-status-chris" placeholder="Enter new status...">
+                <button class="update-btn" onclick="updateStatus('chris')"><i class="fas fa-arrow-up"></i></button>
             </div>
         </div>
-        <button id="refreshButton" class="btn btn-info" style="display:none;">いってらっしゃい</button>
+        <div class="status-box">
+            <div class="status-text" id="status-jiamin">Jiamin's Status: <span class="status-content">No status yet.</span></div>
+            <div class="status-meta" id="status-meta-jiamin">Last updated: <span class="status-time">--</span></div>
+            <div class="update-container">
+                <input type="text" id="new-status-jiamin" placeholder="Enter new status...">
+                <button class="update-btn" onclick="updateStatus('jiamin')"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
     </div>
 
-    <!-- Click Me Button -->
-    <button id="clickMeButton" class="btn btn-info">Click Me ヾ(＾-＾)ノ</button>
-
-    <!-- Credits Button -->
-    <button id="creditsButton" class="btn btn-info">To: Jiamin Cheng<br>From: Christopher Bui</br></button>
-
+    <script src="js/status.js"></script> <!-- Link to the new JavaScript file -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../js/ask-jiamin.js"></script>
 </body>
 </html>
