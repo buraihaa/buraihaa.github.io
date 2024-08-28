@@ -17,3 +17,8 @@
     text-align: center;
     padding: 20px;
 }
+
+/* Hide audio controls */
+#background-audio {
+    display: none;
+}
