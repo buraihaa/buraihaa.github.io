@@ -35,16 +35,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #007bff; /* Blue background */
+    background-color: #3bc555; /* Blue background */
     color: white; /* White text color */
     border: none;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 26px;
 }
 
 #mute-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #fcfcfc; /* Darker blue on hover */
 }
 
 #mute-btn:focus {
