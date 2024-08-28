@@ -22,3 +22,42 @@
 #background-audio {
     display: none;
 }
+
+
+/* Mute Button Styling */
+#mute-btn {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to position the button lower */
+    right: 20px;
+    width: 60px; /* Set a fixed width for the circular button */
+    height: 60px; /* Set a fixed height to match the width */
+    border-radius: 50%; /* Make the button circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#mute-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#mute-btn:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #mute-btn {
+        bottom: 10px; /* Adjust positioning for smaller screens */
+        right: 10px;
+        width: 50px; /* Slightly smaller button */
+        height: 50px; /* Maintain circular shape */
+        font-size: 14px; /* Adjust font size */
+    }
+}
