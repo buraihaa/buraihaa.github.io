@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f0f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #ff39ba;
+}
+
+.game {
+  background: #1b0a25;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  width: min(95vw, 420px);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.stat {
+  font-weight: 600;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: #0fe0e4;
+  color: #111827;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.6);
+  transition: transform 0.05s ease, box-shadow 0.05s ease, filter 0.1s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+.btn:focus-visible {
+  outline: 2px solid #facc15;
+  outline-offset: 2px;
+}
+
+.message {
+  min-height: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: #15d415;
+}
+
+.board {
+  display: grid;
+  gap: 3px;
+  justify-content: center;
+  user-select: none;
+}
+
+/* Cell styles */
+
+.cell {
+  width: 32px;
+  height: 32px;
+  border-radius: 0px;
+  border: none;
+  padding: 0;
+  background: #4b5563;
+  box-shadow: 0 3px 0 #020617;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #e5e7eb;
+  transition: background 0.1s ease, transform 0.05s ease, box-shadow 0.05s ease, filter 0.1s ease;
+}
+
+.cell:hover {
+  filter: brightness(1.2);
+}
+
+.cell:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #020617;
+}
+
+.cell:focus-visible {
+  outline: 2px solid #facc15;
+  outline-offset: 1px;
+}
+
+.cell.revealed {
+  background: #1b0a25;
+  box-shadow: none;
+  cursor: default;
+}
+
+.cell.revealed:hover {
+  filter: none;
+}
+
+/* Mines & flags */
+
+.cell.mine {
+  background: rgb(147, 75, 192);
+  color: #fef2f2;
+}
+
+.cell.flagged {
+  background: #0fe0e4;
+  color: #e5e7eb;
+}
+
+/* Number colors */
+
+.cell.m1 {
+  color: #00eaff;   /* Neon cyan */
+}
+
+.cell.m2 {
+  color: #39ff14;   /* Laser green */
+}
+
+.cell.m3 {
+  color: #ff005e;   /* Hot neon magenta-red */
+}
+
+.cell.m4 {
+  color: #9d4bff;   /* Electric purple */
+}
+
+.cell.m5 {
+  color: #ff9f00;   /* Neon amber/orange */
+}
+
+.cell.m6 {
+  color: #00ffbf;   /* Aqua-mint neon */
+}
+
+.cell.m7 {
+  color: #ff00d4;   /* Bright neon pink/violet */
+}
+
+.cell.m8 {
+  color: #7affff;   /* Pastel-neon cyan */
+}
+
+
+/* Small screens */
+
+@media (max-width: 400px) {
+  .game {
+    padding: 1.1rem;
+  }
+
+  .cell {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+}

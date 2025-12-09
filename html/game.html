@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>マインスイーパー</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/game.css" />
+  <script src="../js/game.js" defer></script>
+</head>
+<body>
+  <div class="game">
+    <h1>マインスイーパー</h1>
+
+    <div class="top-bar">
+      <div class="stat">
+        マイン: <span id="mines-count"></span>
+      </div>
+
+      <button id="reset-btn" class="btn">リセット</button>
+
+      <div class="stat">
+        フラグ: <span id="flags-count"></span>
+      </div>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div id="board" class="board"></div>
+  </div>
+</body>
+</html>
