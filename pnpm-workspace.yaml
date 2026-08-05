@@ -1,0 +1,19 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+
+# Vercel builds/runs on linux-x64, but pnpm only fetches the binaries for the
+# machine that generated the lockfile (this repo is developed on macOS/arm64).
+# sharp ships its native libvips as per-platform optional deps, so without this
+# the linux-x64 build is missing on Vercel and `import sharp` throws
+# ERR_DLOPEN_FAILED at runtime — which takes down every Momente server action
+# (they share one module). Listing linux/x64 here makes pnpm record those
+# binaries in the lockfile so the Vercel install has them too.
+supportedArchitectures:
+  os:
+    - current
+    - linux
+  cpu:
+    - current
+    - x64

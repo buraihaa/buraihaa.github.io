@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ── shadcn semantic token → CSS var mapping (do not edit values here) ───── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* Multilingual chain: Inter (Latin/Cyrillic) → Noto JP/SC (CJK + kaomoji) */
+  --font-sans: var(--font-inter), "Noto Sans JP", "Noto Sans SC",
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* ── DESIGN.md brand tokens (Bluesky) exposed as Tailwind utilities ──────── */
+@theme {
+  --color-ink: #0f172a; /* softened near-black headline ink */
+  --color-ink-slate: #405168; /* secondary text */
+  --color-ink-steel: #667b99; /* tertiary / meta text */
+  --color-ink-mute: #8798b0; /* placeholder / disabled */
+  --color-navy-deep: #354358;
+  --color-sky-tint: #c0dcf0; /* wordmark / soft accent only */
+  --color-page: #f9fafb;
+  --color-canvas: #ffffff;
+  --color-hairline: #dce2ea;
+  --color-brand: #006aff; /* singular Bluesky-Blue voltage */
+
+  /* DESIGN.md type scale (InterVariable roles) */
+  --text-hero: 1.875rem; /* 30px display-xl */
+  --text-hero--line-height: 2.25rem; /* 36px */
+  --text-hero--letter-spacing: -0.5px;
+  --text-display: 1.5rem; /* 24px display-lg */
+  --text-display--line-height: 1.75rem;
+  --text-subhead: 1.2875rem; /* ~20.6px display-md */
+  --text-subhead--line-height: 1.6rem;
+  --text-subhead--letter-spacing: -0.5px;
+  --text-caption: 0.706rem; /* ~11.3px */
+  --text-caption--line-height: 0.9375rem;
+  --text-micro: 0.5rem; /* 8px badge/counter */
+  --text-micro--line-height: 0.5rem;
+}
+
+/* ── Palette: DESIGN.md values on shadcn's semantic slots (light only) ───── */
+:root {
+  --radius: 0.875rem; /* 14px — rounded, cute; buttons override to full pill */
+
+  --background: #f9fafb; /* page wash */
+  --foreground: #0f172a; /* ink */
+  --card: #ffffff; /* canvas */
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  --primary: #006aff; /* Bluesky Blue — single voltage */
+  --primary-foreground: #ffffff;
+  --secondary: #ffffff; /* canvas w/ hairline border button */
+  --secondary-foreground: #0f172a;
+  --muted: #eef2f7;
+  --muted-foreground: #667b99; /* ink-steel */
+  --accent: #eaf1fb; /* soft sky hover surface */
+  --accent-foreground: #0f172a;
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: #dce2ea; /* hairline */
+  --input: #dce2ea;
+  --ring: #006aff; /* focus ring shares the brand blue */
+
+  --chart-1: #006aff;
+  --chart-2: #405168;
+  --chart-3: #667b99;
+  --chart-4: #8798b0;
+  --chart-5: #c0dcf0;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #006aff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eaf1fb;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #dce2ea;
+  --sidebar-ring: #006aff;
+}
+
+/* Dark mode is out of scope for this site (DESIGN.md is light-only) and only
+   activates via an explicit `.dark` class, which we never set. Left inert. */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #006aff;
+  --primary-foreground: #ffffff;
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: #006aff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans antialiased;
+  }
+}
+
+/* iOS Safari auto-zooms into any text field whose font-size is under 16px when
+   it's focused. That zoom is what makes the sign-in/other pages "jump in" so
+   content touches the screen edge (the gutter scales away), and in Chat it
+   zooms the composer so the message thread scrolls out of view. Forcing every
+   form control to ≥16px on touch devices removes the trigger entirely, without
+   changing the desktop type scale (mouse = fine pointer, unaffected). The
+   !important is needed to beat the per-field Tailwind text-[15px]/[14px]
+   utilities; it only bumps mobile font-size, nothing else. */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
